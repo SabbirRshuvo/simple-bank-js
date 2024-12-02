@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- use daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone border-primary">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- add the stat -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="main-balance" class="stat-value">9400</div>
+                <div class="stat-desc">Available money</div>
+              </div>
+            </div>
+            <!-- add driver -->
+            <div class="divider"></div>
+            <div>
+              <button id="show-money-form" class="btn btn-outline">
+                Add Money
+              </button>
+              <button id="show-cash-out-form" class="btn btn-outline">
+                Cash Out
+              </button>
+              <button id="show-transiction-form" class="btn btn-outline">
+                Transiction
+              </button>
+            </div>
+            <!-- add divider -->
+            <div class="divider"></div>
+            <!-- add a cash out and add money form  -->
+            <div
+              id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Add Money</span>
+                  </label>
+                  <input
+                    id="add-money-input"
+                    type="text"
+                    placeholder="Enter Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="pin-number-input"
+                    type="password"
+                    placeholder="Enter Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-btn" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- cash out start here -->
+            <div
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash Out</span>
+                  </label>
+                  <input
+                    id="add-cash-input"
+                    type="text"
+                    placeholder="Enter Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="cash-out-input"
+                    type="password"
+                    placeholder="Enter Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-btn" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- transiction is here to setup  -->
+            <div id="transiction-form" class="hidden">
+              <h2 class="text-2xl">Transiction Histry</h2>
+            </div>
+            <button id="nonExistingButton">Click Me</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document
+        .getElementById("nonExistentButton")
+        .addEventListener("click", function () {
+          alert("Clicked");
+        });
+    </script>
+    <!-- setup with js -->
+    <script src="JS/addMoney.js"></script>
+    <script src="JS/utilities.js"></script>
+    <script src="JS/cash-out.js"></script>
+    <script src="JS/features.js"></script>
+  </body>
+</html>
